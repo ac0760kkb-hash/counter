@@ -1,0 +1,88 @@
+:root {
+  --bg-1: #e8dcc5;
+  --bg-2: #d7c2a2;
+  --panel: #f7f1e7;
+  --panel-strong: #efe2d2;
+  --sage: #7f8f69;
+  --earth: #b76b45;
+  --earth-dark: #8d4d34;
+  --wood: #4f392d;
+  --text: #2b211c;
+  --shadow: rgba(67, 45, 34, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, var(--bg-1), var(--bg-2));
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: 0.04em;
+  color: var(--wood);
+}
+
+body > p {
+  margin: 0 0 1.25rem;
+  font-size: 1.05rem;
+  color: rgba(43, 33, 28, 0.8);
+}
+
+#counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  padding: 1.5rem 2rem;
+  border-radius: 22px;
+  background: rgba(247, 241, 231, 0.92);
+  box-shadow: 0 16px 30px var(--shadow);
+  border: 1px solid rgba(107, 82, 63, 0.08);
+}
+
+button {
+  width: 64px;
+  height: 64px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--earth), var(--earth-dark));
+  color: #fffaf4;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(141, 77, 52, 0.24);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+button:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 12px 18px rgba(141, 77, 52, 0.28);
+}
+
+button:active {
+  transform: translateY(0) scale(0.98);
+}
+
+#counter p {
+  min-width: 90px;
+  margin: 0;
+  font-size: clamp(2.5rem, 8vw, 4.25rem);
+  font-weight: 700;
+  color: var(--wood);
+  line-height: 1;
+}
